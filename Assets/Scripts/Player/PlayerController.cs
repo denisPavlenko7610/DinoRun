@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        transform.position = new Vector3(playerSpawnPosition.position.x, transform.position.y,
-            playerSpawnPosition.position.z);
+        if (other.gameObject.CompareTag("Border"))
+        {
+            transform.position = new Vector3(playerSpawnPosition.position.x, transform.position.y,
+                playerSpawnPosition.position.z);
+        }
     }
 
     private void MoveRight()
