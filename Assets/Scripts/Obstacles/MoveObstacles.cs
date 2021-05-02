@@ -5,6 +5,9 @@ public class MoveObstacles : MonoBehaviour
     
     private void Update()
     {
-        transform.Translate(Vector2.left * (speed * Time.deltaTime));
+        if (GameManager._isGameStop == false)
+        {
+            transform.Translate(Vector2.left * (speed * Time.deltaTime));
+        }
     }
 }

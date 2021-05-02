@@ -1,10 +1,9 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _jumpForce;
-    [SerializeField] private int _speed;
-    [SerializeField] private Transform playerSpawnPosition;
 
     private Rigidbody2D _rigidbody2D;
 
@@ -16,22 +15,14 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Jump();
-
-        MoveRight();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Border"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
-            transform.position = new Vector3(playerSpawnPosition.position.x, transform.position.y,
-                playerSpawnPosition.position.z);
+            GameManager._isGameStop = true;
         }
-    }
-
-    private void MoveRight()
-    {
-        transform.position += Vector3.right * (_speed * Time.deltaTime);
     }
 
     private void Jump()

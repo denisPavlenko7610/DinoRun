@@ -17,7 +17,7 @@ public class ScoreCounter : MonoBehaviour
 
     IEnumerator Count()
     {
-        while (true)
+        while (GameManager._isGameStop == false)
         {
             _score++;
             _scoreText.text = $"{_score}";

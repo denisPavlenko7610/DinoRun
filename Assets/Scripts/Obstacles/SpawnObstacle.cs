@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,7 +53,7 @@ public class SpawnObstacle : MonoBehaviour
 
     IEnumerator DisableObjects()
     {
-        while (true)
+        while (GameManager._isGameStop == false)
         {
             yield return new WaitForSeconds(_disableTime);
             DisableInvisibleObjects();
@@ -61,7 +62,7 @@ public class SpawnObstacle : MonoBehaviour
 
     IEnumerator SpawnObjects()
     {
-        while (true)
+        while (GameManager._isGameStop == false)
         {
             _timeBetweenSpawn = Random.Range(1, _timeBetweenSpawn);
             yield return new WaitForSeconds(_timeBetweenSpawn);
