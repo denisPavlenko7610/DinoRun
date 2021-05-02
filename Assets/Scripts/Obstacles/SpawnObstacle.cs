@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -55,8 +54,11 @@ public class SpawnObstacle : MonoBehaviour
     {
         while (GameManager._isGameStop == false)
         {
+            if (GameManager._isGameStart)
+            {
+                DisableInvisibleObjects();
+            }
             yield return new WaitForSeconds(_disableTime);
-            DisableInvisibleObjects();
         }
     }
 
@@ -64,10 +66,13 @@ public class SpawnObstacle : MonoBehaviour
     {
         while (GameManager._isGameStop == false)
         {
-            _timeBetweenSpawn = Random.Range(1, _timeBetweenSpawn);
+            if (GameManager._isGameStart)
+            {
+                _timeBetweenSpawn = Random.Range(1, _timeBetweenSpawn);
+                int randomObstacle = Random.Range(0, _instantiatedObstacles.Count);
+                _instantiatedObstacles[randomObstacle].gameObject.SetActive(true);
+            }
             yield return new WaitForSeconds(_timeBetweenSpawn);
-            int randomObstacle = Random.Range(0, _instantiatedObstacles.Count);
-            _instantiatedObstacles[randomObstacle].gameObject.SetActive(true);
         }
     }
 }

@@ -10,9 +10,13 @@ public class GridAnimation : MonoBehaviour
 
     void Update()
     {
-        if (GameManager._isGameStop)
+        if (GameManager._isGameStop || GameManager._isGameStart == false)
         {
             _gridAnimator.enabled = false;
+        }
+        else
+        {
+            _gridAnimator.enabled = enabled;
         }
     }
 }

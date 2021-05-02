@@ -5,7 +5,7 @@ public class MoveObstacles : MonoBehaviour
     
     private void Update()
     {
-        if (GameManager._isGameStop == false)
+        if (GameManager._isGameStop == false && GameManager._isGameStart)
         {
             transform.Translate(Vector2.left * (speed * Time.deltaTime));
         }

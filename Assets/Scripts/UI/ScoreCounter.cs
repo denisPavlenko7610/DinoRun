@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -19,8 +18,12 @@ public class ScoreCounter : MonoBehaviour
     {
         while (GameManager._isGameStop == false)
         {
-            _score++;
-            _scoreText.text = $"{_score}";
+            if (GameManager._isGameStart)
+            {
+                _score++;
+                _scoreText.text = $"{_score}";
+            }
+
             yield return new WaitForSeconds(_time);
         }
     }
