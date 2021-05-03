@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class SpawnObstacle : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _obstacles;
+    [SerializeField] private float _minTimeBetweenSpawn;
     [SerializeField] private float _maxTimeBetweenSpawn;
 
     private List<GameObject> _instantiatedObstacles;
@@ -68,7 +69,7 @@ public class SpawnObstacle : MonoBehaviour
         {
             if (GameManager._isGameStart)
             {
-                _timeBetweenSpawn = Random.Range(1, _timeBetweenSpawn);
+                _timeBetweenSpawn = Random.Range(_minTimeBetweenSpawn, _timeBetweenSpawn + 1);
                 int randomObstacle = Random.Range(0, _instantiatedObstacles.Count);
                 _instantiatedObstacles[randomObstacle].gameObject.SetActive(true);
             }
