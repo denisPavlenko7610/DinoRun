@@ -211,6 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 25751799}
   - component: {fileID: 25751798}
+  - component: {fileID: 25751800}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -244,6 +245,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25751800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25751797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17bf1d2b5031e42bee09f9d572110b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &146356442 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 318423178918300235, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
@@ -333,7 +346,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 840616785}
         m_TargetAssemblyTypeName: UIButton, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: RestartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -877,6 +890,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playButton: {fileID: 1818135037}
   _restartButton: {fileID: 280302731}
+  _gameOverEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 25751800}
+        m_TargetAssemblyTypeName: GoogleAdMob, Assembly-CSharp
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &913430455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1531,34 @@ PrefabInstance:
       propertyPath: playerSpawnPosition
       value: 
       objectReference: {fileID: 707231172}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 25751800}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GoogleAdMob, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988180842571255124, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
+      propertyPath: _gameOverEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4988180842571255125, guid: cc0ac4374f85db7418b7b6a0d9a57958, type: 3}
       propertyPath: m_Constraints
       value: 4

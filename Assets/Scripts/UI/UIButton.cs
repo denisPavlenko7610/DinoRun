@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -6,6 +7,7 @@ public class UIButton : MonoBehaviour
 {
     [SerializeField] private Button _playButton;
     [SerializeField] private Button _restartButton;
+    [SerializeField] private UnityEvent _gameOverEvent;
 
     private void Start()
     {
@@ -19,8 +21,8 @@ public class UIButton : MonoBehaviour
         _playButton.gameObject.SetActive(false);
     }
 
-    public void RestartGame()
+    public void RestartButton()
     {
-        SceneManager.LoadScene(0);
+        _gameOverEvent?.Invoke();
     }
 }

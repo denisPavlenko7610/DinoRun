@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _jumpForce;
     [SerializeField] private Button _restartButton;
-    
+
     private Rigidbody2D _rigidbody2D;
     private Animator _playerAnimatior;
     private bool _isGround;
