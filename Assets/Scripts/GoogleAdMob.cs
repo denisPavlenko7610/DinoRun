@@ -15,7 +15,7 @@ public class GoogleAdMob : MonoBehaviour
     private void RequestInterstitial()
     {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-7173647303121367~8828703241"; //"ca-app-pub-3940256099942544/1033173712" test id
+        string adUnitId = "ca-app-pub-7173647303121367~8828703241";
 #else
         string adUnitId = "unexpected_platform";
 #endif
