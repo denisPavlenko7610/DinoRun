@@ -992,21 +992,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23692832}
     m_Modifications:
-    - target: {fileID: 318423178282604973, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0.010638297
-      objectReference: {fileID: 0}
-    - target: {fileID: 318423178282604973, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.010638297
-      objectReference: {fileID: 0}
     - target: {fileID: 318423178918300228, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_Name
       value: Grid
-      objectReference: {fileID: 0}
-    - target: {fileID: 318423178918300228, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 318423178918300235, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_RootOrder
@@ -1051,14 +1039,6 @@ PrefabInstance:
     - target: {fileID: 318423178918300235, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 509034018684497901, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-      propertyPath: m_ChunkCullingBounds.x
-      value: 0.010638297
-      objectReference: {fileID: 0}
-    - target: {fileID: 509034018684497901, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.010638297
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
@@ -1560,12 +1540,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 318423178282604973, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.010638297
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 318423178282604973, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.010638297
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 318423178547834549, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1836c6754a930cb499dcb371c58be5d0, type: 2}
     - target: {fileID: 318423178918300228, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_Name
       value: FirstGrid
@@ -1616,38 +1600,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 509034018684497901, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.010638297
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 509034018684497901, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.010638297
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
---- !u!1 &318423178547834548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 318423178918300228, guid: fe6731739e0367142a254adec9bdcb8e, type: 3}
-  m_PrefabInstance: {fileID: 318423178547834547}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &318423178547834549
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318423178547834548}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1836c6754a930cb499dcb371c58be5d0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4988180842645826766
 PrefabInstance:
   m_ObjectHideFlags: 0

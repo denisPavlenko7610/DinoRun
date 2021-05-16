@@ -15,6 +15,7 @@ public class GoogleAdMob : MonoBehaviour
     private void RequestInterstitial()
     {
 #if UNITY_ANDROID
+        //string adUnitId = "ca-app-pub-3940256099942544/6300978111"; test id
         string adUnitId = "ca-app-pub-7173647303121367~8828703241";
 #else
         string adUnitId = "unexpected_platform";
@@ -35,6 +36,10 @@ public class GoogleAdMob : MonoBehaviour
     {
         if (this.interstitial.IsLoaded()) {
             this.interstitial.Show();
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
         }
     }
     
