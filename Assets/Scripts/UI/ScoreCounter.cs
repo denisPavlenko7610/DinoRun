@@ -11,9 +11,14 @@ public class ScoreCounter : MonoBehaviour
     private int _score;
     private const string HI_Score_Key = "hiScore";
     private int _hiScore;
+    private AudioSource _scoreSound;
+    
+    private int _scoreSoundСoefficient = 100;
+    private int multipleScoreSoundCoefficient = 1;
 
     private void Start()
     {
+        _scoreSound = GetComponent<AudioSource>();
         _scoreText.text = $"{_score}";
 
         GetHiScore();
@@ -26,6 +31,8 @@ public class ScoreCounter : MonoBehaviour
         {
             SetHiScore();
         }
+
+        PlayScoreSound();
     }
 
     private void GetHiScore()
@@ -62,6 +69,15 @@ public class ScoreCounter : MonoBehaviour
             }
 
             yield return new WaitForSeconds(_time);
+        }
+    }
+
+    private void PlayScoreSound()
+    {
+        if (_score >= _scoreSoundСoefficient * multipleScoreSoundCoefficient)
+        {
+            multipleScoreSoundCoefficient++;
+            _scoreSound.Play();
         }
     }
 }

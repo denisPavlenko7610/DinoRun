@@ -9,9 +9,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Animator _playerAnimatior;
     private bool _isGround;
+    private AudioSource _deathSound;
 
     private void Start()
     {
+        _deathSound = GetComponent<AudioSource>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _playerAnimatior = GetComponent<Animator>();
     }
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            _deathSound.Play();
             GameManager._isGameStop = true;
             _playerAnimatior.SetBool("isDead", true);
             _restartButton.gameObject.SetActive(true);
