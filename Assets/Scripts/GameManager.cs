@@ -9,5 +9,6 @@ public class GameManager : MonoBehaviour
     {
         _isGameStop = false;
         _isGameStart = false;
+        Application.targetFrameRate = 300;
     }
 }
