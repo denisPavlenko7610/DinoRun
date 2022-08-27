@@ -408,6 +408,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -3196,6 +3197,135 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      nature_environment_01_19: 21300038
+      nature_environment_01_20: 21300040
+      nature_environment_01_67: 21300134
+      nature_environment_01_104: 21300208
+      nature_environment_01_117: 21300234
+      nature_environment_01_34: 21300068
+      nature_environment_01_45: 21300090
+      nature_environment_01_28: 21300056
+      nature_environment_01_119: 21300238
+      nature_environment_01_90: 21300180
+      nature_environment_01_75: 21300150
+      nature_environment_01_100: 21300200
+      nature_environment_01_82: 21300164
+      nature_environment_01_88: 21300176
+      nature_environment_01_116: 21300232
+      nature_environment_01_6: 21300012
+      nature_environment_01_114: 21300228
+      nature_environment_01_25: 21300050
+      nature_environment_01_23: 21300046
+      nature_environment_01_44: 21300088
+      nature_environment_01_10: 21300020
+      nature_environment_01_50: 21300100
+      nature_environment_01_106: 21300212
+      nature_environment_01_95: 21300190
+      nature_environment_01_83: 21300166
+      nature_environment_01_17: 21300034
+      nature_environment_01_70: 21300140
+      nature_environment_01_121: 21300242
+      nature_environment_01_31: 21300062
+      nature_environment_01_52: 21300104
+      nature_environment_01_76: 21300152
+      nature_environment_01_122: 21300244
+      nature_environment_01_57: 21300114
+      nature_environment_01_62: 21300124
+      nature_environment_01_91: 21300182
+      nature_environment_01_54: 21300108
+      nature_environment_01_107: 21300214
+      nature_environment_01_46: 21300092
+      nature_environment_01_35: 21300070
+      nature_environment_01_16: 21300032
+      nature_environment_01_41: 21300082
+      nature_environment_01_49: 21300098
+      nature_environment_01_18: 21300036
+      nature_environment_01_79: 21300158
+      nature_environment_01_56: 21300112
+      nature_environment_01_103: 21300206
+      nature_environment_01_113: 21300226
+      nature_environment_01_37: 21300074
+      nature_environment_01_105: 21300210
+      nature_environment_01_98: 21300196
+      nature_environment_01_15: 21300030
+      nature_environment_01_85: 21300170
+      nature_environment_01_5: 21300010
+      nature_environment_01_30: 21300060
+      nature_environment_01_80: 21300160
+      nature_environment_01_123: 21300246
+      nature_environment_01_47: 21300094
+      nature_environment_01_89: 21300178
+      nature_environment_01_110: 21300220
+      nature_environment_01_92: 21300184
+      nature_environment_01_108: 21300216
+      nature_environment_01_96: 21300192
+      nature_environment_01_58: 21300116
+      nature_environment_01_68: 21300136
+      nature_environment_01_66: 21300132
+      nature_environment_01_111: 21300222
+      nature_environment_01_109: 21300218
+      nature_environment_01_8: 21300016
+      nature_environment_01_29: 21300058
+      nature_environment_01_43: 21300086
+      nature_environment_01_39: 21300078
+      nature_environment_01_94: 21300188
+      nature_environment_01_112: 21300224
+      nature_environment_01_127: 21300254
+      nature_environment_01_71: 21300142
+      nature_environment_01_73: 21300146
+      nature_environment_01_126: 21300252
+      nature_environment_01_51: 21300102
+      nature_environment_01_59: 21300118
+      nature_environment_01_2: 21300004
+      nature_environment_01_118: 21300236
+      nature_environment_01_24: 21300048
+      nature_environment_01_55: 21300110
+      nature_environment_01_33: 21300066
+      nature_environment_01_60: 21300120
+      nature_environment_01_77: 21300154
+      nature_environment_01_124: 21300248
+      nature_environment_01_65: 21300130
+      nature_environment_01_125: 21300250
+      nature_environment_01_27: 21300054
+      nature_environment_01_63: 21300126
+      nature_environment_01_64: 21300128
+      nature_environment_01_61: 21300122
+      nature_environment_01_26: 21300052
+      nature_environment_01_86: 21300172
+      nature_environment_01_0: 21300000
+      nature_environment_01_115: 21300230
+      nature_environment_01_1: 21300002
+      nature_environment_01_11: 21300022
+      nature_environment_01_99: 21300198
+      nature_environment_01_78: 21300156
+      nature_environment_01_7: 21300014
+      nature_environment_01_84: 21300168
+      nature_environment_01_40: 21300080
+      nature_environment_01_81: 21300162
+      nature_environment_01_4: 21300008
+      nature_environment_01_14: 21300028
+      nature_environment_01_42: 21300084
+      nature_environment_01_9: 21300018
+      nature_environment_01_38: 21300076
+      nature_environment_01_12: 21300024
+      nature_environment_01_13: 21300026
+      nature_environment_01_87: 21300174
+      nature_environment_01_120: 21300240
+      nature_environment_01_36: 21300072
+      nature_environment_01_21: 21300042
+      nature_environment_01_72: 21300144
+      nature_environment_01_102: 21300204
+      nature_environment_01_93: 21300186
+      nature_environment_01_48: 21300096
+      nature_environment_01_53: 21300106
+      nature_environment_01_101: 21300202
+      nature_environment_01_22: 21300044
+      nature_environment_01_97: 21300194
+      nature_environment_01_69: 21300138
+      nature_environment_01_32: 21300064
+      nature_environment_01_74: 21300148
+      nature_environment_01_3: 21300006
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
