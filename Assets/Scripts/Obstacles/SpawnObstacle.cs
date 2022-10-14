@@ -40,7 +40,7 @@ public class SpawnObstacle : MonoBehaviour
 
         for (int i = 0; i < _instantiatedObstacles.Count; i++)
         {
-            if (_instantiatedObstacles[i].activeSelf == true)
+            if (_instantiatedObstacles[i].activeSelf)
             {
                 if (_instantiatedObstacles[i].transform.position.x < disablePoint.x)
                 {
@@ -59,6 +59,7 @@ public class SpawnObstacle : MonoBehaviour
             {
                 DisableInvisibleObjects();
             }
+            
             yield return new WaitForSeconds(_disableTime);
         }
     }
@@ -73,6 +74,7 @@ public class SpawnObstacle : MonoBehaviour
                 int randomObstacle = Random.Range(0, _instantiatedObstacles.Count);
                 _instantiatedObstacles[randomObstacle].gameObject.SetActive(true);
             }
+            
             yield return new WaitForSeconds(_timeBetweenSpawn);
         }
     }
