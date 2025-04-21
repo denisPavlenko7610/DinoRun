@@ -1,1 +1,1 @@
-# DinoRun
+# IdleRun
