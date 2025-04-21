@@ -1,3 +1,19 @@
 {
-	"name": "MainAssembly"
+    "name": "MainAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:06e4c2420d977ed4a8d17f1c6284d07c",
+        "GUID:dad8d2afcb1658d43a74439aa04c4680",
+        "GUID:d8eba1e79a471a24cb1aab967074c964",
+        "GUID:282743afe0c9d3949a7dcea9b82fbf89"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
