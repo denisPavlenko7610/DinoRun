@@ -43,7 +43,7 @@ namespace IdleRun.Core
             //_obstacleFactory.SpawnAll();
             //_enemyFactory.SpawnAll();
 
-            // playerGO.GetComponent<PlayerController>().OnDied += () =>
+            // playerGO.GetComponent<PlayerMovement>().OnDied += () =>
             // {
             //     _levelService.LoadNextLevel();
             //     UnityEngine.SceneManagement.SceneManager.LoadScene(0);

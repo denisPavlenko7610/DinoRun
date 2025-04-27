@@ -19,13 +19,6 @@ public class BackgroundControl_0 : MonoBehaviour
         ChangeSprite();
     }
 
-    void Update()
-    {
-        //for presentation without UIs
-        if (Input.GetKeyDown(KeyCode.RightArrow)) NextBG();
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) BackBG();
-    }
-
     void ChangeSprite()
     {
         Layer_Object[0].GetComponent<SpriteRenderer>().sprite = Layer_Sprites[backgroundNum * 5];

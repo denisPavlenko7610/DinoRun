@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IPlayerFactory
 {
-    PlayerView CreatePlayer(Transform spawnPoint);
+    Player CreatePlayer(Transform spawnPoint);
 }
 
 // PlayerFactory.cs

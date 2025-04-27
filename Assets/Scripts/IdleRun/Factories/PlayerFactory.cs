@@ -10,9 +10,9 @@ public class PlayerFactory : IPlayerFactory
         _config = levelService.CurrentConfig;
     }
 
-    public PlayerView CreatePlayer(Transform spawnPoint)
+    public Player CreatePlayer(Transform spawnPoint)
     {
         return Object.Instantiate(_config.playerView.Prefab, spawnPoint.position, Quaternion.identity)
-            .AddComponent<PlayerView>();
+            .GetComponent<Player>();
     }
 }
