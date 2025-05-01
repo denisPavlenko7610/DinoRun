@@ -2,24 +2,24 @@
 {
     public class StateMachine<T>
     {
-        public IState<T> CurrentState { get; private set; }
+        public IEntityState<T> CurrentState { get; private set; }
 
-        public void Initialize(IState<T> startingState, T entity)
+        public void Initialize(IEntityState<T> startingState, T entity)
         {
             CurrentState = startingState;
             CurrentState.Enter(entity);
         }
 
-        public void ChangeState(IState<T> newState, T entity)
+        public void ChangeState(IEntityState<T> newState, T entity)
         {
             CurrentState.Exit(entity);
             CurrentState = newState;
             CurrentState.Enter(entity);
         }
 
-        public void Update(T entity)
+        public void Tick(T entity)
         {
-            CurrentState?.Execute(entity);
+            CurrentState?.Tick(entity);
         }
     }
 }

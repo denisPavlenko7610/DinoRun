@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IdleRun
 {
-    public class EnemyPatrolState : IState<EnemyView>
+    public class EnemyPatrolState : IEntityState<EnemyView>
     {
         private static readonly int IsWalk = Animator.StringToHash("IsWalk");
 
@@ -12,7 +12,7 @@ namespace IdleRun
             enemy.Animator.SetBool(IsWalk, true);
         }
 
-        public void Execute(EnemyView enemy)
+        public void Tick(EnemyView enemy)
         {
             // enemy.Patrol();
             // if (enemy.CanSeePlayer)

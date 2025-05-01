@@ -1,5 +1,6 @@
 ﻿using IdleRun;
 using IdleRun.Core;
+using IdleRun.Location;
 using UnityEngine;
 
 public class PlayerFactory : IPlayerFactory
@@ -12,7 +13,8 @@ public class PlayerFactory : IPlayerFactory
 
     public Player CreatePlayer(Transform spawnPoint)
     {
-        return Object.Instantiate(_config.playerView.Prefab, spawnPoint.position, Quaternion.identity)
-            .GetComponent<Player>();
+        GameObject player = Object.Instantiate(_config.playerView.Prefab, spawnPoint.position, Quaternion.identity);
+        player.AddComponent<MoveLocationObjectComponent>();
+        return player.GetComponent<Player>();
     }
 }

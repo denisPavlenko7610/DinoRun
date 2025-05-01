@@ -1,9 +1,7 @@
-﻿using IdleRun;
+using IdleRun;
 using UnityEngine;
 
 public interface IPlayerFactory
 {
     Player CreatePlayer(Transform spawnPoint);
 }
-
-// PlayerFactory.cs

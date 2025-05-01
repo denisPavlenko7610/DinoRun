@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using IdleRun.StateMachine;
+using RDTools.Runtime;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace IdleRun.Core
@@ -43,7 +45,7 @@ namespace IdleRun.Core
             //_obstacleFactory.SpawnAll();
             //_enemyFactory.SpawnAll();
 
-            // playerGO.GetComponent<PlayerMovement>().OnDied += () =>
+            // playerGO.GetComponent<PlayerInput>().OnDied += () =>
             // {
             //     _levelService.LoadNextLevel();
             //     UnityEngine.SceneManagement.SceneManager.LoadScene(0);

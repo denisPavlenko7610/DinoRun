@@ -872,8 +872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e906c6017d501f947b0832dd4e87e66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera_Move: 1
-  Camera_MoveSpeed: 3
   Layer_Speed:
   - 1
   - 0.9
@@ -983,6 +981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1102258035}
   - component: {fileID: 1102258036}
+  - component: {fileID: 1102258037}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -1051,6 +1050,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1102258037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102258034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a78ba24958a47e6a12c224f8a23ade5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
 --- !u!1 &1141102608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1489,7 @@ GameObject:
   - component: {fileID: 1449942454}
   - component: {fileID: 1449942453}
   - component: {fileID: 1449942456}
+  - component: {fileID: 1449942457}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1602,6 +1615,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1449942457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449942452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a78ba24958a47e6a12c224f8a23ade5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1.5
 --- !u!1 &1463045428
 GameObject:
   m_ObjectHideFlags: 0

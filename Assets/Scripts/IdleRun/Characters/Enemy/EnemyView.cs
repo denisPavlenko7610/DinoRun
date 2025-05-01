@@ -22,7 +22,7 @@ namespace IdleRun
 
         private void Update()
         {
-            StateMachine.Update(this);
+            StateMachine.Tick(this);
         }
     }
 }

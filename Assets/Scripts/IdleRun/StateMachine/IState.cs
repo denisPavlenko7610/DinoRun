@@ -1,9 +1,9 @@
 ﻿namespace IdleRun.StateMachine
 {
-    public interface IState<T>
+    public interface IState
     {
-        void Enter(T entity);
-        void Execute(T entity);
-        void Exit(T entity);
+        void Enter();
+        void Tick();
+        void Exit();
     }
 }

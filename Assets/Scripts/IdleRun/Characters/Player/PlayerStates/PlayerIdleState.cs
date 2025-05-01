@@ -3,14 +3,14 @@ using IdleRun.StateMachine;
 
 namespace IdleRun
 {
-    public class PlayerIdleState : IState<Player>
+    public class PlayerIdleState : IEntityState<Player>
     {
         public void Enter(Player player)
         {
             player.Animator.SetBool(AnimationConstants.IsRun, false);
         }
 
-        public void Execute(Player player)
+        public void Tick(Player player)
         {
             //game started
             //     player.StateMachine.ChangeState(player.RunState, player);
