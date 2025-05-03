@@ -4,49 +4,33 @@ using UnityEngine;
 namespace IdleRun.Components
 {
     [Serializable]
-    public class MoveComponent
+    public class JumpComponent : MonoBehaviour
     {
         [SerializeField] private Transform _target;
         [SerializeField] private Rigidbody2D _targetRigidbody;
-        [SerializeField] private float _speed = 5f;
-        [SerializeField] private Vector3 _direction;
-        [SerializeField] private bool _canMove;
         [SerializeField] private bool _useRigidbody = true;
         [SerializeField] private float _jumpForce = 10f;
         [SerializeField] private int _maxJumps = 2;
+
+        public event Action OnJump;
+        public event Action OnLand;
         
-        private readonly CompositeCondition _condition = new();
+        private bool _canJump;
         private int _jumpsCount;
 
         public void OnEnable()
         {
             _jumpsCount = _maxJumps;
         }
-
-        public void Update()
-        {
-            if (!_useRigidbody && _condition.IsTrue() && _canMove)
-            {
-                _target.position += _direction * (_speed * Time.deltaTime);
-            }
-        }
-
-        public void FixedUpdate()
-        {
-            if (_useRigidbody && _condition.IsTrue() && _canMove)
-            {
-                _targetRigidbody.MovePosition(_target.position + _direction * (_speed * Time.fixedDeltaTime));
-            }
-        }
-
-        public void SetDirection(Vector3 direction) => _direction = direction;
-
-        public void AddCondition(Func<bool> condition) => _condition.AddCondition(condition);
-
+        
+        public void CanJump(bool canJump) => _canJump = canJump;
+        
         public void Jump()
         {
-            if (_jumpsCount <= 0)
+            if (!_canJump || _jumpsCount <= 0)
                 return;
+            
+            OnJump?.Invoke();
             
             if (_useRigidbody)
             {
@@ -63,8 +47,11 @@ namespace IdleRun.Components
         
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.CompareTag("Ground"))
-                _jumpsCount = _maxJumps;
+            if (!collision.collider.CompareTag("Ground")) 
+                return;
+            
+            _jumpsCount = _maxJumps;
+            OnLand?.Invoke();
         }
     }
 }

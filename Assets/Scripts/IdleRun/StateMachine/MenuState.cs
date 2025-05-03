@@ -6,12 +6,12 @@ namespace IdleRun.StateMachine
 {
     public class MenuState : IState
     {
-        private GameState _gameState;
+        private GameStates _gameStates;
         private InputAction _startAction;
 
-        public MenuState(GameState gameState, InputActionAsset actions)
+        public MenuState(GameStates gameStates, InputActionAsset actions)
         {
-            _gameState = gameState;
+            _gameStates = gameStates;
             _startAction = actions.FindAction("UI/Submit");
         }
 
@@ -24,7 +24,7 @@ namespace IdleRun.StateMachine
 
         private void OnStart(InputAction.CallbackContext ctx)
         {
-            _gameState.ChangeState(new PlayState(_gameState, _startAction.actionMap.asset));
+            _gameStates.ChangeState(new PlayState(_gameStates, _startAction.actionMap.asset));
         }
 
         public void Tick()

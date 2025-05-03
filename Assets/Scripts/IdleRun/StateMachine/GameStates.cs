@@ -1,6 +1,6 @@
 ﻿namespace IdleRun.StateMachine
 {
-    public class GameState
+    public class GameStates
     {
         private IState _current;
 

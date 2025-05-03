@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3306494085528901275}
   - component: {fileID: 1063768280144110668}
   - component: {fileID: 1138475337188822370}
+  - component: {fileID: 6410625378809790927}
+  - component: {fileID: 2870234047220249727}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -191,6 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 5668906561227262554}
+  _jumpComponent: {fileID: 6410625378809790927}
+  _collideComponent: {fileID: 2870234047220249727}
 --- !u!114 &1138475337188822370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +207,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8febf459e5a4aa1ba929d95ca56c48c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
-  jumpForce: 10
-  maxJumps: 2
-  _rigidbody2D: {fileID: 3306494085528901275}
+  _jumpComponent: {fileID: 6410625378809790927}
+  _actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+--- !u!114 &6410625378809790927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8463765183083994627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0988f94b3ff4c96a1bfda2118cf264f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 5297747685888853750}
+  _targetRigidbody: {fileID: 3306494085528901275}
+  _useRigidbody: 1
+  _jumpForce: 10
+  _maxJumps: 2
+--- !u!114 &2870234047220249727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8463765183083994627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b976faf4c5734a028a84a09340691488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,10 +6,10 @@ namespace IdleRun.StateMachine
 {
     public class PlayState : IState
     {
-        private readonly GameState _machine;
+        private readonly GameStates _machine;
         private readonly InputAction _pauseAction;
 
-        public PlayState(GameState machine, InputActionAsset actions)
+        public PlayState(GameStates machine, InputActionAsset actions)
         {
             _machine = machine;
             _pauseAction = actions.FindAction("Gameplay/Pause");

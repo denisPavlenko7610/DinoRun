@@ -11,7 +11,7 @@ namespace IdleRun.Core
         [SerializeField] LevelConfigSO[] allLevelConfigs;
         [SerializeField] private InputActionAsset _actions;
 
-        private GameState _gameState;
+        private GameStates _gameStates;
 
         protected override void Configure(IContainerBuilder builder)
         {
@@ -23,17 +23,16 @@ namespace IdleRun.Core
         protected override void Awake()
         {
             base.Awake();
-            enabled = true;
 
-            _gameState = new GameState();
-            _gameState.Initialize(new MenuState(_gameState, _actions));
+            _gameStates = new GameStates();
+            _gameStates.Initialize(new PlayState(_gameStates, _actions));
 
             DontDestroyOnLoad(gameObject);
         }
         
         private void Update()
         {
-            _gameState.Update();
+            _gameStates.Update();
         }
     }
 }

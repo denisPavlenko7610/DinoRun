@@ -5,11 +5,11 @@ namespace IdleRun.StateMachine
 {
     public class PauseState : IState
     {
-        private readonly GameState _machine;
+        private readonly GameStates _machine;
         private readonly InputAction _resumeAction;
         private readonly InputAction _menuAction;
 
-        public PauseState(GameState machine, InputActionAsset actions)
+        public PauseState(GameStates machine, InputActionAsset actions)
         {
             _machine = machine;
             _resumeAction = actions.FindAction("Gameplay/Resume"); // например Escape или Gamepad Start

@@ -13,13 +13,12 @@ namespace IdleRun
 
         public void Tick(Player player)
         {
-            // player.Move();
-            // if (player.Input.Magnitude < 0.1f)
-            //     player.StateMachine.ChangeState(player.IdleState, player);
+            
         }
 
         public void Exit(Player player)
         {
+            
         }
     }
 }
